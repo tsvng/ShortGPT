@@ -114,7 +114,7 @@ class VideoAutomationUI:
                 if self.voice_module == ElevenLabsVoiceModule:
                     self.voice_module = ElevenLabsVoiceModule(ApiKeyManager.get_api_key('ELEVEN LABS'), "Antoni", checkElevenCredits=True)
                 elif self.voice_module == EdgeTTSVoiceModule:
-                    self.voice_module = EdgeTTSVoiceModule(EDGE_TTS_VOICENAME_MAPPING[self.language]['male'])
+                    self.voice_module = EdgeTTSVoiceModule(EDGE_TTS_VOICENAME_MAPPING[self.language]['female'])
                 self.state = Chatstate.ASK_DESCRIPTION
                 bot_message = "Amazing 🔥 ! 📝Can you describe thoroughly the subject of your video?📝 I will next generate you a script based on that description"
             elif self.state == Chatstate.ASK_DESCRIPTION:
